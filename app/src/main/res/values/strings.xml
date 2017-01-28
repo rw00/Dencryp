@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE resources [
+    <!ENTITY appname "Dencryp">
+    <!ENTITY author "RW">
+    ]>
+<resources>
+    <string name="app_name">&appname;</string>
+    <string name="my_email">raafatwahb@gmail.com</string>
+    <string name="my_nickname">&author;</string>
+    <string name="version">1.0</string>
+    <string name="about">About</string>
+
+    <string name="ime_name">&appname; Keyboard</string>
+
+    <string name="word_separators">\u0020.,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+    <string name="label_subtype_generic">%s</string>
+    <string name="settings_name">&appname; Keyboard Settings</string>
+    <string name="language_selection_title">Input languages</string>
+    <string name="select_language">Select input languages</string>
+    <string name="general_category">General</string>
+
+    <string name="decrypt">Decrypt</string>
+    <string name="text">Text</string>
+    <string name="paste">Paste</string>
+    <string name="clear">Clear</string>
+    <string name="copy">Copy</string>
+</resources>

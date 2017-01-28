@@ -1,0 +1,70 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rw.dencryp">
+
+    <application
+        android:name=".DencrypApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <service
+            android:name=".keyboard.DencrypKeyboardService"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+        <activity
+            android:name=".keyboard.inputmethod.InputMethodEditorPreferences"
+            android:label="@string/settings_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DecryptActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.rw.com"
+                    android:pathPrefix="/dencryp"
+                    android:scheme="http" />
+                <data
+                    android:host="dencryp"
+                    android:scheme="rw" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" />
+
+        <!--activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" /-->
+    </application>
+</manifest>
